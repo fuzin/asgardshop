@@ -18,8 +18,6 @@
 @include('partials.navigation')
 
 <div class="container">
-
-    <h1>TEST</h1>
     @yield('content')
 </div>
 @include('partials.footer')
