@@ -9,7 +9,7 @@ var elixir = require('laravel-elixir');
  | for your Laravel application. By default, we are compiling the Less
  | file for our application, as well as publishing vendor resources.
  |
- */
+ */g
 
 elixir(function(mix) {
     mix.less('app.less');

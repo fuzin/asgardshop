@@ -40,7 +40,7 @@ elixir(function (mix) {
         '/vendor/bootstrap/dist/js/bootstrap.min.js',
         '/vendor/prism/prism.js',
         '/js/bootswatch.js'
-    ], null, 'resources');
+    ], '../../public/themes/' + themeInfo.name.toLowerCase() + '/js', 'resources');
 
     /**
      * Copy Bootstrap fonts
@@ -65,25 +65,5 @@ elixir(function (mix) {
         'assets',
         '../../public/themes/' + themeInfo.name.toLowerCase()
     )
-
-
-    /**
-     * Copy css to public
-
-    mix.copy(
-        'public/css',
-        '../../public/themes/' + themeInfo.name.toLowerCase() + '/css'
-    )
-    */
-
-
-    /**
-     * Copy js to public
-
-    mix.copy(
-        'public/js',
-        '../../public/themes/' + themeInfo.name.toLowerCase() + '/js'
-    )
-     */
-
+    
 });
