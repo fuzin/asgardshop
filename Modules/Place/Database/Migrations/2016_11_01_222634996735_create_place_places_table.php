@@ -15,7 +15,8 @@ class CreatePlacePlacesTable extends Migration
 		Schema::create('place__places', function(Blueprint $table) {
 			$table->engine = 'InnoDB';
             $table->increments('id');
-            // Your fields
+			$table->integer("zip");
+			$table->string("name",120);
             $table->timestamps();
 		});
 	}
