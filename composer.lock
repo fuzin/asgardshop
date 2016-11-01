@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "38e95c4121d4310b62533f525e60489d",
-    "content-hash": "8c592525640722a767a51df7e361f966",
+    "hash": "6b22ec58edf81f4f2132483c17bacb8d",
+    "content-hash": "2d5b0cb4263a21551674a902ffeb1286",
     "packages": [
         {
             "name": "asgardcms/adminlte-theme",
@@ -42,6 +42,44 @@
                 "asgard-cms"
             ],
             "time": "2016-01-12 12:47:36"
+        },
+        {
+            "name": "asgardcms/blog-module",
+            "version": "1.15.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/AsgardCms/Blog.git",
+                "reference": "e69b5e07344ead2c7e2ffc6ccb21e78931bdc262"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/AsgardCms/Blog/zipball/e69b5e07344ead2c7e2ffc6ccb21e78931bdc262",
+                "reference": "e69b5e07344ead2c7e2ffc6ccb21e78931bdc262",
+                "shasum": ""
+            },
+            "require": {
+                "composer/installers": "~1.0",
+                "php": ">=5.4"
+            },
+            "type": "asgard-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Widart",
+                    "email": "info@asgardcms.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A blog module for AsgardCMS.",
+            "keywords": [
+                "asgardcms",
+                "blog",
+                "journal"
+            ],
+            "time": "2016-06-08 19:41:11"
         },
         {
             "name": "asgardcms/core-module",

@@ -25,7 +25,8 @@
     "asgardcms/workshop-module": "~1.0",
     "asgardcms/translation-module": "~1.0",
     "asgardcms/flatly-theme": "~1.0",
-    "asgardcms/adminlte-theme": "~1.0"
+    "asgardcms/adminlte-theme": "~1.0",
+    "asgardcms/blog-module": "^1.15"
   },
   "require-dev": {
     "phpunit/phpunit": "~4.0",
