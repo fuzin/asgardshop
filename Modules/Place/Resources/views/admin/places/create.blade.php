@@ -13,6 +13,15 @@
 
 @section('styles')
     {!! Theme::script('js/vendor/ckeditor/ckeditor.js') !!}
+
+    <link href="{!! Module::asset('media:css/dropzone.css') !!}" rel="stylesheet" type="text/css" />
+    <style>
+        .dropzone {
+            border: 1px dashed #CCC;
+            min-height: 227px;
+            margin-bottom: 20px;
+        }
+    </style>
 @stop
 
 @section('content')
@@ -40,6 +49,17 @@
         </div>
     </div>
     {!! Form::close() !!}
+
+    {{--
+    <div class="row">
+        <div class="col-md-12">
+            <form method="POST" class="dropzone">
+                {!! Form::token() !!}
+            </form>
+        </div>
+    </div>
+    --}}
+
 @stop
 
 @section('footer')
@@ -53,6 +73,15 @@
 @stop
 
 @section('scripts')
+@section('scripts')
+    <script src="{!! Module::asset('media:js/dropzone.js') !!}"></script>
+    <?php $config = config('asgard.media.config'); ?>
+    <script>
+        var maxFilesize = '<?php echo $config['max-file-size'] ?>',
+                acceptedFiles = '<?php echo $config['allowed-types'] ?>';
+    </script>
+    <script src="{!! Module::asset('media:js/init-dropzone.js') !!}"></script>
+
     <script type="text/javascript">
         $( document ).ready(function() {
             $(document).keypressAction({
@@ -70,4 +99,8 @@
             });
         });
     </script>
+
 @stop
+
+
+

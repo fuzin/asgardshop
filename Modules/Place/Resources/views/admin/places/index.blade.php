@@ -29,6 +29,9 @@
                         <thead>
                         <tr>
                             <th>{{ trans('core::core.table.created at') }}</th>
+                            <th>{{ trans('place::place.table.name') }}</th>
+                            <th>{{ trans('place::place.table.zip') }}</th>
+                            <th>{{ trans('place::place.table.city') }}</th>
                             <th data-sortable="false">{{ trans('core::core.table.actions') }}</th>
                         </tr>
                         </thead>
@@ -39,6 +42,21 @@
                             <td>
                                 <a href="{{ route('admin.place.place.edit', [$place->id]) }}">
                                     {{ $place->created_at }}
+                                </a>
+                            </td>
+                            <td>
+                                <a href="{{ route('admin.place.place.edit', [$place->id]) }}">
+                                    {{ $place->name}}
+                                </a>
+                            </td>
+                            <td>
+                                <a href="{{ route('admin.place.place.edit', [$place->id]) }}">
+                                    {{ $place->zip }}
+                                </a>
+                            </td>
+                            <td>
+                                <a href="{{ route('admin.place.place.edit', [$place->id]) }}">
+                                    {{ $place->city }}
                                 </a>
                             </td>
                             <td>
@@ -54,6 +72,9 @@
                         <tfoot>
                         <tr>
                             <th>{{ trans('core::core.table.created at') }}</th>
+                            <th>{{ trans('place::place.table.name') }}</th>
+                            <th>{{ trans('place::place.table.zip') }}</th>
+                            <th>{{ trans('place::place.table.city') }}</th>
                             <th>{{ trans('core::core.table.actions') }}</th>
                         </tr>
                         </tfoot>

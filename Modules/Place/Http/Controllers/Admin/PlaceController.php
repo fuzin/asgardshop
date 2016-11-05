@@ -27,9 +27,9 @@ class PlaceController extends AdminBaseController
      */
     public function index()
     {
-        //$places = $this->place->all();
+        $places = $this->place->all();
 
-        return view('place::admin.places.index', compact(''));
+        return view('place::admin.places.index', compact('places'));
     }
 
     /**
