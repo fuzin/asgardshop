@@ -2,11 +2,11 @@
 
 @section('content-header')
     <h1>
-        {{ trans('place::places.title.places') }}
+        {{ trans('place::placess.title.places') }}
     </h1>
     <ol class="breadcrumb">
         <li><a href="{{ route('dashboard.index') }}"><i class="fa fa-dashboard"></i> {{ trans('core::core.breadcrumb.home') }}</a></li>
-        <li class="active">{{ trans('place::places.title.places') }}</li>
+        <li class="active">{{ trans('place::placess.title.places') }}</li>
     </ol>
 @stop
 
@@ -16,7 +16,7 @@
             <div class="row">
                 <div class="btn-group pull-right" style="margin: 0 15px 15px 0;">
                     <a href="{{ route('admin.place.place.create') }}" class="btn btn-primary btn-flat" style="padding: 4px 10px;">
-                        <i class="fa fa-pencil"></i> {{ trans('place::places.button.create place') }}
+                        <i class="fa fa-pencil"></i> {{ trans('place::placess.button.create place') }}
                     </a>
                 </div>
             </div>
@@ -29,9 +29,9 @@
                         <thead>
                         <tr>
                             <th>{{ trans('core::core.table.created at') }}</th>
-                            <th>{{ trans('place::place.table.name') }}</th>
-                            <th>{{ trans('place::place.table.zip') }}</th>
-                            <th>{{ trans('place::place.table.city') }}</th>
+                            <th>{{ trans('place::places.table.name') }}</th>
+                            <th>{{ trans('place::places.table.zip') }}</th>
+                            <th>{{ trans('place::places.table.city') }}</th>
                             <th data-sortable="false">{{ trans('core::core.table.actions') }}</th>
                         </tr>
                         </thead>
@@ -72,9 +72,9 @@
                         <tfoot>
                         <tr>
                             <th>{{ trans('core::core.table.created at') }}</th>
-                            <th>{{ trans('place::place.table.name') }}</th>
-                            <th>{{ trans('place::place.table.zip') }}</th>
-                            <th>{{ trans('place::place.table.city') }}</th>
+                            <th>{{ trans('place::places.table.name') }}</th>
+                            <th>{{ trans('place::places.table.zip') }}</th>
+                            <th>{{ trans('place::places.table.city') }}</th>
                             <th>{{ trans('core::core.table.actions') }}</th>
                         </tr>
                         </tfoot>
@@ -94,7 +94,7 @@
 @section('shortcuts')
     <dl class="dl-horizontal">
         <dt><code>c</code></dt>
-        <dd>{{ trans('place::places.title.create place') }}</dd>
+        <dd>{{ trans('place::placess.title.create place') }}</dd>
     </dl>
 @stop
 
