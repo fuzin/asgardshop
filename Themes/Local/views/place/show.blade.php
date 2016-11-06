@@ -17,6 +17,6 @@
     </div>
 
     <div class="row">
-        <a href="">{!! trans('place::places.go-to-index') !!}</a>
+        <a href="{{ route('place.index')  }}">{!! trans('place::places.go-to-index') !!}</a>
     </div>
 @stop
