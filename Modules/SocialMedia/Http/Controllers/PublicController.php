@@ -19,8 +19,9 @@ class PublicController extends BasePublicController
 
         try
         {
-            $username = 'fuzin3';
-            $tweets = $twitter->getTweetsFromUser($username, 10, 1, true);
+            // $username = 'fuzin3';
+            // $tweets = $twitter->getTweetsFromUser($username, 10, 1, true);
+            $tweets = $twitter->searchTweets('kronach', 10, 1, true);
         }
         catch (TwitterException $e)
         {
