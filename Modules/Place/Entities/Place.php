@@ -9,6 +9,6 @@ class Place extends Model
 
     protected $table = 'place__places';
     public $translatedAttributes = ['name', 'slug', 'description'];
-    protected $fillable = ['name', 'slug', 'description'];
+    protected $fillable = ['name', 'slug', 'description', 'zip', 'city', 'streetName', 'streetNumber', 'addressInfo'];
     
 }

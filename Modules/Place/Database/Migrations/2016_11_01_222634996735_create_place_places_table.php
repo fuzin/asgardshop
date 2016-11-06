@@ -20,8 +20,8 @@ class CreatePlacePlacesTable extends Migration
 			$table->string("zip", 10);
 			$table->string('city', 100);
 			$table->string('streetName', 100);
-			$table->string('stringNumber', 10);
-
+            $table->integer('streetNumber');
+            $table->string('addressInfo', 120);
 
             $table->timestamps();
 		});

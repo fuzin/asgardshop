@@ -12,7 +12,7 @@ return [
     'table' => [
         'name'  => 'Name',
         'zip'   => 'ZIP',
-        'city'  => 'city'
+        'city'  => 'City'
     ],
     'form' => [
         'name'              => 'Name',
@@ -23,7 +23,12 @@ return [
         'meta_description'  => 'Meta description',
         'facebook_data'     => 'Facebook data',
         'og_title'          => 'Facebook title',
-        'og_description'    => 'Facebook description'
+        'og_description'    => 'Facebook description',
+        'zip'               => 'Postal code',
+        'city'              => 'City',
+        'streeName'         => 'Street name',
+        'streetNumber'      => 'Street number',
+        'addressInfo'       => 'Address info'
 
     ],
     'messages' => [
@@ -31,4 +36,5 @@ return [
     ],
     'validation' => [
     ],
+
 ];
