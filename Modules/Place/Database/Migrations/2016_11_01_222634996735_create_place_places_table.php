@@ -17,7 +17,7 @@ class CreatePlacePlacesTable extends Migration
             $table->increments('id');
 
 			//
-            $table->string("name", 10);
+            $table->string("name", 255);
 
             //
             $table->string('email', 100);

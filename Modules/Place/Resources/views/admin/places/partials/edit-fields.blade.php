@@ -11,7 +11,16 @@
         <div class="input-group">
             <span class="input-group-addon"><i class="fa fa-cutlery"></i></span>
             <?php $old = $place->name ? $place->name: '' ?>
-            {!! Form::text("name", old("name", $old), ['class' => 'form-control slug', 'data-name' => 'target', 'placeholder' => trans('place::places.form.name')]) !!}
+            {!!
+                Form::text(
+                    "name",
+                    old("name", $old),
+                    [
+                        'class' => 'form-control slug',
+                        'data-name' => 'target',
+                        'placeholder' => trans('place::places.form.name')
+                    ])
+            !!}
         </div>
         {!! $errors->first("name", '<span class="help-block">:message</span>') !!}
     </div>

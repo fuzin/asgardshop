@@ -35,14 +35,14 @@
                         </div>
                         {!! $errors->first("zip", '<span class="help-block">:message</span>') !!}
                     </div>
-                    <div class='form-group{{ $errors->has("phone") ? ' has-error' : '' }}'>
-                        {!! Form::label("phone", trans('place::places.form.phone')) !!}
+                    <div class='form-group{{ $errors->has("city") ? ' has-error' : '' }}'>
+                        {!! Form::label("city", trans('place::places.form.city')) !!}
                         <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
-                            {!! Form::text("phone", old("phone"), ['class' => 'form-control slug', 'data-phone' => 'target', 'placeholder' => trans('place::places.form.phone')]) !!}
+                            {!! Form::text("city", old("city"), ['class' => 'form-control slug', 'data-city' => 'target', 'placeholder' => trans('place::places.form.city')]) !!}
                         </div>
-                        {!! $errors->first("phone", '<span class="help-block">:message</span>') !!}
-                    </div>
+                        {!! $errors->first("city", '<span class="help-block">:message</span>') !!}
+                    </div>ss
                     <div class='form-group{{ $errors->has("streetName") ? ' has-error' : '' }}'>
                         {!! Form::label("streetName", trans('place::places.form.streetName')) !!}
                         <div class="input-group">
