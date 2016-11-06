@@ -1,11 +1,11 @@
 <div class="box-body">
     <p>
     <div class="box-body">
-        <div class='form-group{{ $errors->has("{$lang}.name") ? ' has-error' : '' }}'>
-            {!! Form::label("{$lang}[name]", trans('place::places.form.name')) !!}
-            <?php $old = $place->hasTranslation($lang) ? $place->translate($lang)->name: '' ?>
-            {!! Form::text("{$lang}[name]", old("{$lang}.name", $old), ['class' => 'form-control', 'data-slug' => 'source', 'placeholder' => trans('place::places.form.name')]) !!}
-            {!! $errors->first("{$lang}.name", '<span class="help-block">:message</span>') !!}
+        <div class='form-group{{ $errors->has("{$lang}.title") ? ' has-error' : '' }}'>
+            {!! Form::label("{$lang}[title]", trans('place::places.form.title')) !!}
+            <?php $old = $place->hasTranslation($lang) ? $place->translate($lang)->title: '' ?>
+            {!! Form::text("{$lang}[title]", old("{$lang}.title", $old), ['class' => 'form-control', 'data-slug' => 'source', 'placeholder' => trans('place::places.form.title')]) !!}
+            {!! $errors->first("{$lang}.title", '<span class="help-block">:message</span>') !!}
         </div>
         <div class='form-group{{ $errors->has("{$lang}.slug") ? ' has-error' : '' }}'>
             {!! Form::label("{$lang}[slug]", trans('place::places.form.slug')) !!}

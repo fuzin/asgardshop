@@ -1,12 +1,12 @@
 <div class="box-body">
-    <div class='form-group{{ $errors->has("{$lang}.name") ? ' has-error' : '' }}'>
-        {!! Form::label("{$lang}[name]", trans('place::places.form.name')) !!}
-        {!! Form::text("{$lang}[name]", old("{$lang}.name"), [
+    <div class='form-group{{ $errors->has("{$lang}.title") ? ' has-error' : '' }}'>
+        {!! Form::label("{$lang}[title]", trans('place::places.form.title')) !!}
+        {!! Form::text("{$lang}[title]", old("{$lang}.title"), [
                                                                 'class' => 'form-control',
                                                                 'data-slug' => 'source',
-                                                                'placeholder' => trans('place::place.form.name')
+                                                                'placeholder' => trans('place::place.form.title')
                                                               ]) !!}
-        {!! $errors->first("{$lang}.name", '<span class="help-block">:message</span>') !!}
+        {!! $errors->first("{$lang}.title", '<span class="help-block">:message</span>') !!}
     </div>
     <div class='form-group{{ $errors->has("{$lang}.slug") ? ' has-error' : '' }}'>
         {!! Form::label("{$lang}[slug]", trans('place::places.form.slug')) !!}

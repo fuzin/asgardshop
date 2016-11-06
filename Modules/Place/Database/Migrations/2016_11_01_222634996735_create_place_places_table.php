@@ -17,6 +17,16 @@ class CreatePlacePlacesTable extends Migration
             $table->increments('id');
 
 			//
+            $table->string("name", 10);
+
+            //
+            $table->string('email', 100);
+            $table->string('phone', 40);
+            $table->string('website', 255);
+            $table->string('faxNumber', 100);
+            $table->string('smsNumber', 100);
+
+            //
 			$table->string("zip", 10);
 			$table->string('city', 100);
 			$table->string('streetName', 100);
@@ -30,7 +40,7 @@ class CreatePlacePlacesTable extends Migration
             $table->engine = 'InnoDB';
             $table->increments('id');
 
-            $table->string("name",120);
+            $table->string("title",120);
             $table->string('slug', 255);
             $table->text('description');
 

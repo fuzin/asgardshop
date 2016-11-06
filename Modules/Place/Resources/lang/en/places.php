@@ -16,6 +16,7 @@ return [
     ],
     'form' => [
         'name'              => 'Name',
+        'address'           => 'Address',
         'slug'              => 'Slug',
         'description'       => 'Description',
         'meta_data'         => 'Meta data',
@@ -24,12 +25,18 @@ return [
         'facebook_data'     => 'Facebook data',
         'og_title'          => 'Facebook title',
         'og_description'    => 'Facebook description',
+        'basicInfo'         => 'Basic Info',
         'zip'               => 'Postal code',
         'city'              => 'City',
-        'streeName'         => 'Street name',
+        'streetName'        => 'Street name',
         'streetNumber'      => 'Street number',
-        'addressInfo'       => 'Address info'
-
+        'addressInfo'       => 'Address info',
+        'contact_data'      => 'Contact data',
+        'phone'             => 'Phone',
+        'email'             => 'Email',
+        'website'           => 'Website',
+        'faxNumber'         => 'Fax number',
+        'smsNumber'         => 'SMS number'
     ],
     'messages' => [
 

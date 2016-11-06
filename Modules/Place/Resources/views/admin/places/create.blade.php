@@ -26,6 +26,27 @@
 
 @section('content')
     {!! Form::open(['route' => ['admin.place.place.store'], 'method' => 'post']) !!}
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-primary">
+                @include('place::admin.places.partials.create-fields')
+
+                <div class="box-footer">
+                    <button type="submit" class="btn btn-primary btn-flat">{{ trans('core::core.button.create') }}</button>
+                    <button class="btn btn-default btn-flat" name="button" type="reset">{{ trans('core::core.button.reset') }}</button>
+                    <a class="btn btn-danger pull-right btn-flat"
+                       href="{{ route('admin.place.place.index')}}">
+                        <i class="fa fa-times"></i> {{ trans('core::core.button.cancel') }}
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <?php /*
+
     <div class="row">
         <div class="col-md-12">
             <div class="nav-tabs-custom">
@@ -39,30 +60,18 @@
                         </div>
                     @endforeach
                 </div>
-            </div> {{-- end nav-tabs-custom --}}
-        </div>
-    </div>
-
-
-    <div class="row">
-        <div class="col-md-12">
-            <div class="box box-primary">
-                @include('place::admin.places.partials.create-fields')
             </div>
         </div>
     </div>
 
     <div class="row">
         <div class="col-md-12">
-            <div class="box box-primary">
-                <div class="box-footer">
-                    <button type="submit" class="btn btn-primary btn-flat">{{ trans('core::core.button.create') }}</button>
-                    <button class="btn btn-default btn-flat" name="button" type="reset">{{ trans('core::core.button.reset') }}</button>
-                    <a class="btn btn-danger pull-right btn-flat" href="{{ route('admin.place.place.index')}}"><i class="fa fa-times"></i> {{ trans('core::core.button.cancel') }}</a>
-                </div>
+            <div class="box">
             </div>
         </div>
     </div>
+     */ ?>
+
     {!! Form::close() !!}
 
     {{--

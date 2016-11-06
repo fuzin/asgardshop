@@ -18,6 +18,8 @@
 @section('content')
     {!! Form::open(['route' => ['admin.place.place.update', $place->id], 'method' => 'put']) !!}
     <div class="row">
+
+
         <div class="col-md-12">
             <div class="nav-tabs-custom">
                 @include('partials.form-tab-headers')
@@ -36,23 +38,22 @@
 
     <div class="row">
         <div class="col-md-12">
-            <div class="box box-primary">
-                @include('place::admin.places.partials.edit-fields')
-            </div>
-        </div>
-    </div>
 
-    <div class="row">
-        <div class="col-md-12">
             <div class="box box-primary">
+                <div class="box-body">
+                    @include('place::admin.places.partials.edit-fields')
+                </div>
                 <div class="box-footer">
                     <button type="submit" class="btn btn-primary btn-flat">{{ trans('core::core.button.update') }}</button>
                     <button class="btn btn-default btn-flat" name="button" type="reset">{{ trans('core::core.button.reset') }}</button>
                     <a class="btn btn-danger pull-right btn-flat" href="{{ route('admin.place.place.index')}}"><i class="fa fa-times"></i> {{ trans('core::core.button.cancel') }}</a>
                 </div>
             </div>
+
         </div>
     </div>
+
+
     {!! Form::close() !!}
 @stop
 
