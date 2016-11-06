@@ -12,7 +12,7 @@
     <div class="row">
         <ul>
         @foreach($places as $place)
-            <li>Test</li>
+            <li><a href="{{ route('place.show', [$place->slug]) }}">{!! $place->name !!}, {!! $place->zip !!} {!! $place->city !!}, {!! $place->phone !!}</a></li>
         @endforeach
         </ul>
     </div>
