@@ -77,7 +77,7 @@
                     </div>
                     <div class="form-group{{ $errors->has("{$lang}[og_type]") ? ' has-error' : '' }}">
                         <label>{{ trans('place::places.form.og_type') }}</label>
-                        <select class="form-control" name="{{ $lang }}[og_type]">page
+                        <select class="form-control" name="{{ $lang }}[og_type]">
                             <option value="website" {{ old("$lang.og_type") == 'website' ? 'selected' : '' }}>{{ trans('place::places.facebook-types.website') }}</option>
                             <option value="product" {{ old("$lang.og_type") == 'product' ? 'selected' : '' }}>{{ trans('place::places.facebook-types.product') }}</option>
                             <option value="article" {{ old("$lang.og_type") == 'article' ? 'selected' : '' }}>{{ trans('place::places.facebook-types.article') }}</option>
