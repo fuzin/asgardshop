@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6b22ec58edf81f4f2132483c17bacb8d",
-    "content-hash": "2d5b0cb4263a21551674a902ffeb1286",
+    "hash": "6eb843c99ec5d7bac292c86bf0a1c9b1",
+    "content-hash": "80a60f3782502bce2be1fe12c4f39432",
     "packages": [
         {
             "name": "asgardcms/adminlte-theme",
@@ -730,6 +730,239 @@
                 "preload"
             ],
             "time": "2015-11-09 22:51:51"
+        },
+        {
+            "name": "codezero/configurator",
+            "version": "3.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/codezero-be/configurator.git",
+                "reference": "f7f3f51445321ea0d295edbbcbffd4ae610e2ce6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/codezero-be/configurator/zipball/f7f3f51445321ea0d295edbbcbffd4ae610e2ce6",
+                "reference": "f7f3f51445321ea0d295edbbcbffd4ae610e2ce6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "~2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "CodeZero\\Configurator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ivan Vermeyen",
+                    "email": "ivan@codezero.be"
+                }
+            ],
+            "description": "Inject configuration data into your classes",
+            "keywords": [
+                "config",
+                "configuration",
+                "configurator",
+                "laravel",
+                "loader",
+                "php"
+            ],
+            "time": "2015-02-05 16:18:26"
+        },
+        {
+            "name": "codezero/courier",
+            "version": "1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/codezero-be/courier.git",
+                "reference": "950b4452e9c85b44a04172dc6cfda366852aecee"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/codezero-be/courier/zipball/950b4452e9c85b44a04172dc6cfda366852aecee",
+                "reference": "950b4452e9c85b44a04172dc6cfda366852aecee",
+                "shasum": ""
+            },
+            "require": {
+                "codezero/curl": "1.*",
+                "illuminate/contracts": "~5.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "~2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "CodeZero\\Courier\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ivan Vermeyen",
+                    "email": "ivan@codezero.be"
+                }
+            ],
+            "description": "Simple HTTP request interface with optional caching",
+            "keywords": [
+                "api",
+                "curl",
+                "http",
+                "laravel",
+                "post",
+                "request",
+                "rest"
+            ],
+            "time": "2015-02-05 22:30:35"
+        },
+        {
+            "name": "codezero/curl",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/codezero-be/curl.git",
+                "reference": "c1385479886662b6276c18dd9140df529959d95c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/codezero-be/curl/zipball/c1385479886662b6276c18dd9140df529959d95c",
+                "reference": "c1385479886662b6276c18dd9140df529959d95c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "~2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "CodeZero\\Curl\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ivan Vermeyen",
+                    "email": "ivan@codezero.be"
+                }
+            ],
+            "description": "Simple cURL wrapper",
+            "keywords": [
+                "api",
+                "curl",
+                "http",
+                "request"
+            ],
+            "time": "2015-02-19 19:53:46"
+        },
+        {
+            "name": "codezero/twitter",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/codezero-be/twitter.git",
+                "reference": "41d170e28126b44b78902f31c7df852f729da740"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/codezero-be/twitter/zipball/41d170e28126b44b78902f31c7df852f729da740",
+                "reference": "41d170e28126b44b78902f31c7df852f729da740",
+                "shasum": ""
+            },
+            "require": {
+                "codezero/configurator": "3.*",
+                "codezero/courier": "1.*",
+                "codezero/utilities": "1.*",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "~2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "CodeZero\\Twitter\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ivan Vermeyen",
+                    "email": "ivan@codezero.be"
+                }
+            ],
+            "description": "Simple Twitter API wrapper",
+            "keywords": [
+                "api",
+                "laravel",
+                "twitter"
+            ],
+            "time": "2015-12-12 14:38:25"
+        },
+        {
+            "name": "codezero/utilities",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/codezero-be/utilities.git",
+                "reference": "798b4c3a7f27fdae1dc3eccb7bb4c59f62622db2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/codezero-be/utilities/zipball/798b4c3a7f27fdae1dc3eccb7bb4c59f62622db2",
+                "reference": "798b4c3a7f27fdae1dc3eccb7bb4c59f62622db2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpspec/phpspec": "~2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "CodeZero\\Utilities\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ivan Vermeyen",
+                    "email": "ivan@codezero.be"
+                }
+            ],
+            "description": "All-round utilities library",
+            "keywords": [
+                "helpers",
+                "tools",
+                "utilities"
+            ],
+            "time": "2015-02-03 00:25:10"
         },
         {
             "name": "composer/installers",

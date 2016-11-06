@@ -1,0 +1,17 @@
+{
+    "name": "SocialMedia",
+    "alias": "socialmedia",
+    "description": "",
+    "version": "v0.1",
+    "keywords": [],
+    "active": 1,
+    "order": 1,
+    "providers": [
+        "Modules\\SocialMedia\\Providers\\SocialMediaServiceProvider",
+        "Modules\\SocialMedia\\Providers\\RouteServiceProvider"
+    ],
+    "aliases":{},
+    "files": [
+        
+    ]
+}

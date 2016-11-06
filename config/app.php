@@ -166,6 +166,8 @@ return [
 
 
 		Modules\Core\Providers\AsgardServiceProvider::class,
+
+		CodeZero\Twitter\TwitterServiceProvider::class,
 	],
 
 	/*
