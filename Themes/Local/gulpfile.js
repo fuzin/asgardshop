@@ -39,7 +39,9 @@ elixir(function (mix) {
         '/vendor/jquery/dist/jquery.js',
         '/vendor/bootstrap/dist/js/bootstrap.min.js',
         '/vendor/prism/prism.js',
-        '/js/bootswatch.js'
+        '/js/bootswatch.js',
+        '/vendor/vue/dist/vue.js',
+        '/vendor/masonry/dist/masonry.pkgd.min.js',
     ], '../../public/themes/' + themeInfo.name.toLowerCase() + '/js', 'resources');
 
     /**

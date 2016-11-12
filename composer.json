@@ -27,7 +27,10 @@
     "asgardcms/flatly-theme": "~1.0",
     "asgardcms/adminlte-theme": "~1.0",
     "asgardcms/blog-module": "^1.15",
-    "codezero/twitter": "^1.1"
+    "codezero/twitter": "^1.1",
+    "iconic/facebook": "^1.53",
+    "facebook/graph-sdk": "^5.4",
+    "andreyco/instagram": "^3.4"
   },
   "require-dev": {
     "phpunit/phpunit": "~4.0",

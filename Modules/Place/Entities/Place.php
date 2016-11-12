@@ -31,4 +31,6 @@ class Place extends Model
         'smsNumber'
     ];
     
+    
+    
 }

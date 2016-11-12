@@ -31,4 +31,10 @@ class PublicController extends BasePublicController
 
         return view('place.show', compact('place'));
     }
+
+    public function store() {
+
+        
+    }
+
 }

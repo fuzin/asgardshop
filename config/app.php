@@ -168,6 +168,8 @@ return [
 		Modules\Core\Providers\AsgardServiceProvider::class,
 
 		CodeZero\Twitter\TwitterServiceProvider::class,
+		Iconic\Facebook\FacebookServiceProvider::class,
+		Andreyco\Instagram\Support\Laravel\ServiceProvider\Instagram::class,
 	],
 
 	/*
@@ -215,5 +217,7 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
+		'Facebook'  => Iconic\Facebook\Facades\FacebookClient::class,
+		'Instagram' => Andreyco\Instagram\Support\Laravel\Facade\Instagram::class,
 	],
 ];

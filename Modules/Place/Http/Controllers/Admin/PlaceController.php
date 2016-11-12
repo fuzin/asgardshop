@@ -98,4 +98,5 @@ class PlaceController extends AdminBaseController
 
         return redirect()->route('admin.place.place.index');
     }
+
 }

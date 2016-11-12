@@ -11,6 +11,7 @@
     </title>
     <link rel="shortcut icon" href="{{ Theme::url('favicon.ico') }}">
     {!! Theme::style('css/app.css') !!}
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 </head>
 <body>
 
@@ -20,7 +21,6 @@
     @yield('content')
 </div>
 @include('partials.footer')
-
 {!! Theme::script('js/all.js') !!}
 @yield('scripts')
 
