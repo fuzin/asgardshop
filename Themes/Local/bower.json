@@ -16,6 +16,8 @@
     "bootstrap": "~3.3.2",
     "font-awesome": "~4.3.0",
     "prism": "*",
-    "three.js": "threejs#*"
+    "three.js": "threejs#*",
+    "vue": "^2.0.5",
+    "masonry": "^4.1.1"
   }
 }
