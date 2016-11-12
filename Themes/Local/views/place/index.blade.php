@@ -34,6 +34,7 @@
 
         .caption span {
             background-color: #fff;
+            opacity: 0.8;
             padding: 10px;
             font-size: large;
             font-family: 'Montserrat', sans-serif;;
@@ -83,10 +84,12 @@
         <div class="col-xs-12 col-sm-6 col-md-4">
             <div style="bottom-top: 1px solid #42424 ; margin: 15px 0;" v-show="isVisible">
                 <div class="thumbnail text-center">
-                    <img src="https://static.pexels.com/photos/2232/vegetables-italian-pizza-restaurant.jpg" class="img-responsive" alt="">
-                    <div class="caption">
-                        <span>@{{ name }}</span>
-                    </div>
+                    <a href="href">
+                        <img src="https://static.pexels.com/photos/2232/vegetables-italian-pizza-restaurant.jpg" class="img-responsive" alt="">
+                        <div class="caption">
+                            <span>@{{ name }}</span>
+                        </div>
+                    </a>
                 </div>
                 <div>
                     @{{ zip + ' ' + city }} <br/>
@@ -121,7 +124,7 @@
                     // check if q is in name
                     if(this.q == '') {
                         this.isVisible = true;
-                    } else if(this.name.toLowerCase().indexOf(this.q) == -1) {
+                    } else if(this.name.toLowerCase().indexOf(this.q.toLowerCase()) == -1) {
                         this.isVisible = false;
                     }
 
