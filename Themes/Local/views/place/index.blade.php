@@ -121,7 +121,7 @@
                     // check if q is in name
                     if(this.q == '') {
                         this.isVisible = true;
-                    } else if(this.name.indexOf(this.q) == -1) {
+                    } else if(this.name.toLowerCase().indexOf(this.q) == -1) {
                         this.isVisible = false;
                     }
 
