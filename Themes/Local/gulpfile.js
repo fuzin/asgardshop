@@ -41,6 +41,7 @@ elixir(function (mix) {
         '/vendor/prism/prism.js',
         '/js/bootswatch.js',
         '/vendor/vue/dist/vue.js',
+        '/vendor/vue-resource/dist/vue-resource.js',
         '/vendor/masonry/dist/masonry.pkgd.min.js',
     ], '../../public/themes/' + themeInfo.name.toLowerCase() + '/js', 'resources');
 

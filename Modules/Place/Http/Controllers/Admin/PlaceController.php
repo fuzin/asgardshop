@@ -53,7 +53,7 @@ class PlaceController extends AdminBaseController
         $this->place->create($request->all());
 
         flash()->success(trans('core::core.messages.resource created', ['name' => trans('place::places.title.places')]));
-
+        
         return redirect()->route('admin.place.place.index');
     }
 

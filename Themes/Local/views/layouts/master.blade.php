@@ -12,6 +12,8 @@
     <link rel="shortcut icon" href="{{ Theme::url('favicon.ico') }}">
     {!! Theme::style('css/app.css') !!}
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    {{-- This is the token Laravel requires for non-GET requests --}}
+    <meta id="_token" value="{{ csrf_token() }}">
 </head>
 <body>
 

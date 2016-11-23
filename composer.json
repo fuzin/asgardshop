@@ -30,7 +30,10 @@
     "codezero/twitter": "^1.1",
     "iconic/facebook": "^1.53",
     "facebook/graph-sdk": "^5.4",
-    "andreyco/instagram": "^3.4"
+    "andreyco/instagram": "^3.4",
+    "duxet/laravel-rethinkdb": "dev-master",
+    "danielmewes/php-rql": "^2.3",
+    "brunojk/laravel-rethinkdb": "^1.0"
   },
   "require-dev": {
     "phpunit/phpunit": "~4.0",

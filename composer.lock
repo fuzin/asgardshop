@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b015e329394164ba1345bf7801762c1d",
-    "content-hash": "1048d9dc183d48ba2272bd7fe7fc9451",
+    "hash": "2083554453c11094690e92919ab84252",
+    "content-hash": "f3ba02afe277e431b538c025a051adaa",
     "packages": [
         {
             "name": "andreyco/instagram",
@@ -582,6 +582,53 @@
             "time": "2016-09-08 17:14:13"
         },
         {
+            "name": "brunojk/laravel-rethinkdb",
+            "version": "v1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/brunojk/laravel-rethinkdb.git",
+                "reference": "f67b3ed8583e5103631e8ca4cabf9c303c759c10"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/brunojk/laravel-rethinkdb/zipball/f67b3ed8583e5103631e8ca4cabf9c303c759c10",
+                "reference": "f67b3ed8583e5103631e8ca4cabf9c303c759c10",
+                "shasum": ""
+            },
+            "require": {
+                "danielmewes/php-rql": "~2.3.0",
+                "illuminate/container": ">=5.0.0",
+                "illuminate/contracts": ">=5.0.0",
+                "illuminate/database": ">=5.0.0",
+                "illuminate/support": ">=5.0.0",
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "codeclimate/php-test-reporter": "0.1.*@dev",
+                "mockery/mockery": "0.9.*@dev",
+                "orchestra/testbench": "3.2.*",
+                "phpunit/phpunit": "5.4.6",
+                "psr/log": "1.0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "brunojk\\LaravelRethinkdb\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "brunojk"
+                }
+            ],
+            "description": "RethinkDB driver adapter for Laravel",
+            "time": "2016-09-20 00:21:06"
+        },
+        {
             "name": "cartalyst/sentinel",
             "version": "v2.0.13",
             "source": {
@@ -1113,6 +1160,60 @@
                 "zikula"
             ],
             "time": "2016-08-13 20:53:52"
+        },
+        {
+            "name": "danielmewes/php-rql",
+            "version": "2.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/danielmewes/php-rql.git",
+                "reference": "393a49ab5c3ce2cb7f3fc5c985e612b77ce472cd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/danielmewes/php-rql/zipball/393a49ab5c3ce2cb7f3fc5c985e612b77ce472cd",
+                "reference": "393a49ab5c3ce2cb7f3fc5c985e612b77ce472cd",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "jakub-onderka/php-parallel-lint": "dev-master",
+                "phpunit/phpunit": "~4.8",
+                "squizlabs/php_codesniffer": "~2.5"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "rdb/rdb.php"
+                ],
+                "psr-4": {
+                    "r\\": "rdb/",
+                    "r\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Daniel Mewes",
+                    "email": "danielmewes@onlinehome.de",
+                    "homepage": "http://dmewes.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A PHP client driver for the RethinkDB query language (ReQL)",
+            "homepage": "http://danielmewes.github.io/php-rql/",
+            "keywords": [
+                "database",
+                "driver",
+                "reql",
+                "rethinkdb"
+            ],
+            "time": "2016-05-31 01:55:32"
         },
         {
             "name": "danielstjules/stringy",
@@ -1722,6 +1823,53 @@
                 "parser"
             ],
             "time": "2014-09-09 13:34:57"
+        },
+        {
+            "name": "duxet/laravel-rethinkdb",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/duxet/laravel-rethinkdb.git",
+                "reference": "a6e70b7f3ef8d08c86c4f871589e77cf1d8edf7b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/duxet/laravel-rethinkdb/zipball/a6e70b7f3ef8d08c86c4f871589e77cf1d8edf7b",
+                "reference": "a6e70b7f3ef8d08c86c4f871589e77cf1d8edf7b",
+                "shasum": ""
+            },
+            "require": {
+                "danielmewes/php-rql": "~2.3.0",
+                "illuminate/container": ">=5.0.0",
+                "illuminate/contracts": ">=5.0.0",
+                "illuminate/database": ">=5.0.0",
+                "illuminate/support": ">=5.0.0",
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "codeclimate/php-test-reporter": "0.1.*@dev",
+                "mockery/mockery": "0.9.*@dev",
+                "orchestra/testbench": "3.0.*",
+                "phpunit/phpunit": "~4.0",
+                "psr/log": "1.0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "duxet\\Rethinkdb\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "duxet"
+                }
+            ],
+            "description": "RethinkDB adapter for Laravel",
+            "time": "2016-11-16 11:17:05"
         },
         {
             "name": "erusev/parsedown",
@@ -5962,7 +6110,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "pingpong/modules": 20
+        "pingpong/modules": 20,
+        "duxet/laravel-rethinkdb": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

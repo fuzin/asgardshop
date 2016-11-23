@@ -32,9 +32,8 @@ class PublicController extends BasePublicController
         return view('place.show', compact('place'));
     }
 
-    public function store() {
-
-        
+    public function store($chat) {
+        // $message = request.param('message');
     }
 
 }

@@ -66,6 +66,7 @@
                         name="{!! $place->name !!}"
                         image=""
                         href="{{ route('place.show', [$place->slug]) }}"
+                        slug="{!! $place->slug !!}"
                         zip="{!! $place->zip !!}"
                         city="{!! $place->city !!}"
                         phone="{!! $place->phone !!}"
@@ -84,8 +85,8 @@
         <div class="col-xs-12 col-sm-6 col-md-4">
             <div style="bottom-top: 1px solid #42424 ; margin: 15px 0;" v-show="isVisible">
                 <div class="thumbnail text-center">
-                    <a href="href">
-                        <img src="https://static.pexels.com/photos/2232/vegetables-italian-pizza-restaurant.jpg" class="img-responsive" alt="">
+                    <a v-bind:href="href">
+                        <img src="belhttps://static.pexels.com/photos/2232/vegetables-italian-pizza-restaurant.jpg" class="img-responsive" alt="">
                         <div class="caption">
                             <span>@{{ name }}</span>
                         </div>
@@ -104,7 +105,7 @@
         Vue.component('place', {
             template: '#place-template',
 
-            props: ['name', 'image', 'href', 'q'],
+            props: ['name', 'image', 'href', 'slug', 'q'],
 
             data: function () {
                 return {

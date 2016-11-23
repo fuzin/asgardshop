@@ -1,0 +1,17 @@
+{
+    "name": "Chat",
+    "alias": "chat",
+    "description": "",
+    "version": "v0.1",
+    "keywords": [],
+    "active": 1,
+    "order": 1,
+    "providers": [
+        "Modules\\Chat\\Providers\\ChatServiceProvider",
+        "Modules\\Chat\\Providers\\RouteServiceProvider"
+    ],
+    "aliases":{},
+    "files": [
+        
+    ]
+}
