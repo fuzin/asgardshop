@@ -19,9 +19,9 @@
 
 @include('partials.navigation')
 
-<div class="container">
-    @yield('content')
-</div>
+
+@yield('content')
+
 @include('partials.footer')
 {!! Theme::script('js/all.js') !!}
 @yield('scripts')
