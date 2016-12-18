@@ -17,18 +17,10 @@
 </head>
 <body>
 
-@include('partials.navigation')
-
-
 @yield('content')
 
-@include('partials.footer')
 {!! Theme::script('js/all.js') !!}
 @yield('scripts')
 
-
-<?php if (Setting::has('core::google-analytics')): ?>
-{!! Setting::get('core::google-analytics') !!}
-<?php endif; ?>
 </body>
 </html>

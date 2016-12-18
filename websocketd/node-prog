@@ -75,13 +75,11 @@ r.connect( {host: 'localhost', port: 28015}, function(err, conn) {
         cursor.each(function(err, row) {
             if (err) throw err;
             console.dir(JSON.stringify(row));
+            // console.dir(row);
         });
     });
 
-    
-})
-
-
+});
 
 
 

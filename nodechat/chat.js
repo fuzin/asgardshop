@@ -1,12 +1,15 @@
 var http = require('http');
-var trim = require('trim');
-var rethink = require('rethink');
+// var trim = require('trim');
+// var rethink = require('rethink');
+var rethinkdb = require('rethinkdb');
+
 
 http.createServer(function(request, response) {
     var headers = request.headers;
     var method = request.method;
     var url = request.url;
     var body = [];
+
     request.on('error', function(err) {
         console.error(err);
     }).on('data', function(chunk) {
@@ -20,12 +23,13 @@ http.createServer(function(request, response) {
             console.error(err);
         });
 
-        r.connect( {host: 'localhost', port: 28015}, function(err, conn) {
+
+        rethinkdb.connect( {host: 'localhost', port: 28015}, function(err, conn) {
 
             if (err) throw err;
             var connection = conn;
 
-            rethink.table('message').insert({
+            rethinkdb.table('message').insert({
                 message: 'test',
                 room: 'test'
             });
@@ -35,6 +39,7 @@ http.createServer(function(request, response) {
 
         response.statusCode = 200;
         response.setHeader('Content-Type', 'application/json');
+        // response.setHeader('Access-Control-Allow-Origin', '*');
         // Note: the 2 lines above could be replaced with this next one:
         // response.writeHead(200, {'Content-Type': 'application/json'})
 
@@ -46,9 +51,13 @@ http.createServer(function(request, response) {
         };
 
         // TODO: vue recognizes this as OPTIONS not POST and cant decode JSON
-        response.end(JSON.stringify({message:'test'}, null, 3));
+        // response.end(JSON.stringify({message:'test'}));
+        response.end(JSON.stringify({message:'test'}));
+        console.log('message saved');
+
         // END OF NEW STUFF
 
     });
+
 }).listen(8282);
 

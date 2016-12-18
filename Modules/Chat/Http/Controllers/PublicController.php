@@ -62,4 +62,10 @@ class PublicController extends BasePublicController
         return response(array('email' => 'bojan@kovacec.net'),200)->header('Content-Type', 'application/json');
     }
 
+    /**
+     * Chat room
+     */
+    public function room() {
+        return view('chat.room');
+    }
 }
