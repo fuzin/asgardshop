@@ -12,7 +12,7 @@
 
 @section('content')
 <style>
-    .col-md-2, .col-md-10{
+    .pad0 {
         padding:0;
     }
     .panel{
@@ -241,11 +241,11 @@
     <template id="message-template">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="row msg_container base_receive">
-                <div class="col-md-2 col-xs-2 avatar">
+                <div class="col-md-1 col-xs-2 avatar pad0">
                     <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg"
                          class=" img-responsive ">
                 </div>
-                <div class="col-xs-10 col-md-10">
+                <div class="col-xs-10 col-md-11 pad0">
                     <div class="messages msg_receive">
                         <p> @{{ text }}</p>
                         <time datetime="2009-11-13T20:00">@{{ username }} • @{{ since }}</time>
