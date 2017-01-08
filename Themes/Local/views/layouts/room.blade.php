@@ -17,8 +17,9 @@
 </head>
 <body>
 
-@yield('content')
+@include('partials.navigation')
 
+@yield('content')
 {!! Theme::script('js/all.js') !!}
 @yield('scripts')
 

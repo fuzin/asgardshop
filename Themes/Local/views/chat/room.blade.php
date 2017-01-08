@@ -53,6 +53,12 @@
         padding-bottom:20px !important;
         margin-right:0;
     }
+
+    #messagesContainer {
+        max-height: 400px;
+        overflow-y: scroll;
+    }
+
     .messages {
         background: white;
         padding: 10px;
@@ -113,8 +119,6 @@
         float: right;
     }
 
-
-
     .msg_container_base::-webkit-scrollbar-track
     {
         -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
@@ -140,98 +144,102 @@
     }
 </style>
 
+<div class="container-fluid">
+    <div class="row/col-xs-12">
+        <span>Room: {!! $name !!}, Username: {!! $username !!}</span>
+    </div>
+</div>
 
-<div id="app">
-    <div class="container-fluid">
-        <div class="row chat-window col-xs-12" id="chat_window_1">
-            <div class="col-xs-12 col-md-12">
-                <div class="panel panel-default">
-                    <!--
-                    <div class="panel-heading top-bar">
-                        <div class="col-md-8 col-xs-8">
-                            <h3 class="panel-title"><span class="glyphicon glyphicon-comment"></span> Open Chat</h3>
-                        </div>
-                        <div class="col-md-4 col-xs-4" style="text-align: right;">
-                            <a href="#"><span id="minim_chat_window" class="glyphicon glyphicon-minus icon_minim"></span></a>
-                            <a href="#"><span class="glyphicon glyphicon-remove icon_close" data-id="chat_window_1"></span></a>
-                        </div>
+
+<div class="container-fluid" id="app">
+    <div class="row chat-window col-xs-12" id="chat_window_1">
+        <div class="col-xs-12 col-md-12">
+            <div class="panel panel-default">
+                <!--
+                <div class="panel-heading top-bar">
+                    <div class="col-md-8 col-xs-8">
+                        <h3 class="panel-title"><span class="glyphicon glyphicon-comment"></span> Open Chat</h3>
                     </div>
-                    -->
-                    <div class="panel-body msg_container_base" id="messagesContainer">
+                    <div class="col-md-4 col-xs-4" style="text-align: right;">
+                        <a href="#"><span id="minim_chat_window" class="glyphicon glyphicon-minus icon_minim"></span></a>
+                        <a href="#"><span class="glyphicon glyphicon-remove icon_close" data-id="chat_window_1"></span></a>
+                    </div>
+                </div>
+                -->
+                <div class="panel-body msg_container_base" id="messagesContainer">
 
-                        <message v-for="(message, index) in messages"
-                                 v-bind:username="message.username"
-                                 v-bind:text="message.text"
-                        ></message>
+                    <message v-for="(message, index) in messages"
+                             v-bind:username="message.username"
+                             v-bind:text="message.text"
+                    ></message>
 
-                        <?php /* For each message */ ?>
+                    <?php /* For each message */ ?>
 
-                        <?php /*
+                    <?php /*
 
-                             <div class="row msg_container base_receive">
-                                <div class="col-md-2 col-xs-2 avatar">
-                                    <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">
-                                </div>
-                                <div class="col-xs-10 col-md-10">
-                                    <div class="messages msg_receive">
-                                        <p>that mongodb thing looks good, huh?
-                                            tiny master db, and huge document store</p>
-                                        <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
-                                    </div>
+                         <div class="row msg_container base_receive">
+                            <div class="col-md-2 col-xs-2 avatar">
+                                <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">
+                            </div>
+                            <div class="col-xs-10 col-md-10">
+                                <div class="messages msg_receive">
+                                    <p>that mongodb thing looks good, huh?
+                                        tiny master db, and huge document store</p>
+                                    <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
                                 </div>
                             </div>
+                        </div>
 
 
-                            <div class="row msg_container base_sent">
-                                <div class="col-md-10 col-xs-10">
-                                    <div class="messages msg_sent">
-                                        <p>that mongodb thing looks good, huh?
-                                            tiny master db, and huge document store</p>
-                                        <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
-                                    </div>
-                                </div>
-                                <div class="col-md-2 col-xs-2 avatar">
-                                    <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">
+                        <div class="row msg_container base_sent">
+                            <div class="col-md-10 col-xs-10">
+                                <div class="messages msg_sent">
+                                    <p>that mongodb thing looks good, huh?
+                                        tiny master db, and huge document store</p>
+                                    <time datetime="2009-11-13T20:00">Timothy • 51 min</time>
                                 </div>
                             </div>
-                            */ ?>
-                    </div>
-                    <div class="panel-footer">
-                        <div class="input-group">
-
-                            <input id="btn-input"
-                                   type="text"
-                                   class="form-control input-sm chat_input"
-                                   placeholder="Write your message here..."
-                                   name="message"
-                                   v-on:keyup.enter="sendMessage"
-                                   v-model="message"
-                            />
-                            <span class="input-group-btn">
-                                <button class="btn btn-primary btn-sm" id="btn-chat" v-on:click="sendMessage">Send</button>
-                            </span>
+                            <div class="col-md-2 col-xs-2 avatar">
+                                <img src="http://www.bitrebels.com/wp-content/uploads/2011/02/Original-Facebook-Geek-Profile-Avatar-1.jpg" class=" img-responsive ">
+                            </div>
                         </div>
+                        */ ?>
+                </div>
+                <div class="panel-footer">
+                    <div class="input-group">
+
+                        <input id="btn-input"
+                               type="text"
+                               class="form-control input-sm chat_input"
+                               placeholder="Write your message here..."
+                               name="message"
+                               v-on:keyup.enter="sendMessage"
+                               v-model="message"
+                        />
+                        <span class="input-group-btn">
+                            <button class="btn btn-primary btn-sm" id="btn-chat" v-on:click="sendMessage">Send</button>
+                        </span>
                     </div>
                 </div>
             </div>
         </div>
-
-        <!--
-        <div class="btn-group dropup">
-            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
-                <span class="glyphicon glyphicon-cog"></span>
-                <span class="sr-only">Toggle Dropdown</span>
-            </button>
-            <ul class="dropdown-menu" role="menu">
-                <li><a href="#" id="new_chat"><span class="glyphicon glyphicon-plus"></span> Novo</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-list"></span> Ver outras</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-remove"></span> Fechar Tudo</a></li>
-                <li class="divider"></li>
-                <li><a href="#"><span class="glyphicon glyphicon-eye-close"></span> Invisivel</a></li>
-            </ul>
-        </div>
-        -->
     </div>
+
+    <!--
+    <div class="btn-group dropup">
+        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+            <span class="glyphicon glyphicon-cog"></span>
+            <span class="sr-only">Toggle Dropdown</span>
+        </button>
+        <ul class="dropdown-menu" role="menu">
+            <li><a href="#" id="new_chat"><span class="glyphicon glyphicon-plus"></span> Novo</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-list"></span> Ver outras</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-remove"></span> Fechar Tudo</a></li>
+            <li class="divider"></li>
+            <li><a href="#"><span class="glyphicon glyphicon-eye-close"></span> Invisivel</a></li>
+        </ul>
+    </div>
+    -->
 </div>
 @stop
 
@@ -281,11 +289,33 @@
             data: {
                 message: '',
                 lastMessage: '',
-                messages: []
+                messages: [/*
+                    {
+                        text: "test",
+                        username: "test"
+                    },
+                    {
+                        text: "test",
+                        username: "test"
+                    },{
+                        text: "test",
+                        username: "test"
+                    },{
+                        text: "test",
+                        username: "test"
+                    } */
+                ]
             },
             methods: {
                 receiveMessage: function (message) {
                     this.messages.push(message);
+                    // scrollDown messageContainer
+                    this.$nextTick(function() {
+                        var objDiv = document.getElementById("messagesContainer");
+                        objDiv.scrollTop = objDiv.scrollHeight;
+                    });
+
+
                 },
 
                 sendMessage: function (message) {
@@ -305,7 +335,7 @@
                     Vue.http.headers.common['X-CSRF-TOKEN'] = document.querySelector('#_token').getAttribute('value');
                     // console.log('{!! $storeMsgUrl !!}');
 
-                    this.$http.post('/en/chat/store', {text: this.message, username: 'test'}).then(function (response) {
+                    this.$http.post('/en/chat/store', {text: this.message, username: '{!! $username !!}'}).then(function (response) {
                         // console.log(response);
                         // console.log('here response success');
 

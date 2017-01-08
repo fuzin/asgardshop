@@ -1,8 +1,10 @@
 <?php namespace Modules\Chat\Http\Controllers;
 
+use App\Http\Requests\Request;
 use brunojk\LaravelRethinkdb\Query\Builder;
 use Illuminate\Support\Facades\App;
 use Illuminate\Http\Response;
+use Modules\Chat\Http\Requests\CreateRoomRequest;
 use Modules\Chat\Repositories\ChatRepository;
 use Modules\Core\Http\Controllers\BasePublicController;
 
@@ -12,6 +14,7 @@ use brunojk\LaravelRethinkdb\Query\Builder as Bilder;
 
 
 use Modules\Chat\Http\Requests\CreateMessageRequest;
+use Modules\Chat\Http\Requests\CreateUsernameRequest;
 
 class PublicController extends BasePublicController
 {
@@ -63,11 +66,6 @@ class PublicController extends BasePublicController
         $query->insert([
             'test' => 'test'
         ]);
-        */
-
-
-
-        /*
         $query->r()->run('r.table(\'message\').insert({
                 text: \'message test 123\',
                 username: \'test\'})');
@@ -109,12 +107,21 @@ class PublicController extends BasePublicController
     /**
      * Chat room
      */
-    public function room() {
+    public function room(CreateRoomRequest $request) {
         // urls for services
+
+        $name = $request->get("room");
+        $username = $request->get("username");
+
         $baseUrl = url('/');
         $storeMsgUrl = $baseUrl.':8282/';
         $wsUrl = 'ws://'.preg_replace('#^https?://#', '', $baseUrl).':8081/';
-        return view('chat.room', compact('storeMsgUrl', 'wsUrl'));
+        return view('chat.room', compact('name', 'username', 'storeMsgUrl', 'wsUrl'));
+    }
+
+    public function user(CreateUsernameRequest $request) {
+        $room = $request->get("room");
+        return view('chat.user', compact('room'));
     }
 
 }

@@ -31,7 +31,7 @@
     <div class="container">
         <div class="row" style="margin-top: 50px">
             <div class="col-md-8 col-md-offset-2">
-                {!! Form::open(['route' => ['chat.room'], 'method' => 'post']) !!}
+                {!! Form::open(['route' => ['chat.user'], 'method' => 'post']) !!}
                 <div class="form-group">
                     <div class="input-group">
                         <!--
@@ -51,7 +51,9 @@
                             </div>
                         </div>
                         -->
-                        <input type="search" name="searchBy" id="searchBy" class="form-control" />
+
+                        <span class="input-group-addon" id="basic-addon1">Chat room</span>
+                        <input type="text" name="room" id="room" class="form-control" />
                         <span class="input-group-btn">
                             <button id="filter" class="btn btn-primary btn-block" onclick="searchStationTable();">
                                 {!! trans('Join Room') !!}
