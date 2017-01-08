@@ -208,7 +208,7 @@
                                    v-model="message"
                             />
                             <span class="input-group-btn">
-                                <button class="btn btn-primary btn-sm" id="btn-chat">Send</button>
+                                <button class="btn btn-primary btn-sm" id="btn-chat" v-on:click="sendMessage">Send</button>
                             </span>
                         </div>
                     </div>
@@ -307,10 +307,13 @@
 
                     this.$http.post('/en/chat/store', {text: this.message, username: 'test'}).then(function (response) {
                         // console.log(response);
-                        console.log('here response success');
+                        // console.log('here response success');
+
                     }, function (response) {
                         // console.log(response);
-                        console.log('here response fails');
+                        // console.log('here response fails');
+
+
                     });
 
                     // console.log('{!! $storeMsgUrl !!}');
