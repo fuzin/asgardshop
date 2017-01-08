@@ -257,7 +257,7 @@
 
     <script type="text/javascript">
 
-        var ws = new WebSocket('ws://local:8081/');
+        var ws = new WebSocket('{!! $wsUrl !!}');
 
         Vue.component('message', {
             template: '#message-template',
@@ -280,6 +280,7 @@
             el: "#app",
             data: {
                 message: '',
+                lastMessage: '',
                 messages: []
             },
             methods: {
@@ -288,10 +289,9 @@
                 },
 
                 sendMessage: function (message) {
-                    // send message
 
-                    console.log('here');
-                    this.messages.push({text: this.message, id: "not-set", username: "not-set"});
+                    // display message to chat room view
+                    // this.messages.push({text: this.message, id: "not-set", username: "not-set"});
 
                     // process ajax request
                     //this.$http.post('http://local:8282', message, function (data) {
@@ -300,19 +300,21 @@
 
                     // POST /someUrl
                     // this.$http.post('http://local:8282', {message: this.message}, {method: 'POST'}).then(function (response) {
+                    // TODO check
 
                     Vue.http.headers.common['X-CSRF-TOKEN'] = document.querySelector('#_token').getAttribute('value');
+                    // console.log('{!! $storeMsgUrl !!}');
 
-                    this.$http.jsonp('http://local:8282').then(function (response) {
-                        console.log(response);
+                    this.$http.post('/en/chat/store', {text: this.message, username: 'test'}).then(function (response) {
+                        // console.log(response);
                         console.log('here response success');
                     }, function (response) {
-                        console.log(response);
+                        // console.log(response);
                         console.log('here response fails');
                     });
 
-
-
+                    // console.log('{!! $storeMsgUrl !!}');
+                    this.lastMessage = this.message;
                     this.message = '';
                 }
             }
@@ -320,17 +322,21 @@
 
         // start chat
         // vue.chat();
+
         ws.onmessage = function (event) {
 
             console.log(event.data);
 
-            // wird ...
+            // wird ///////////////////////////////////
+            // response has '
             var message = event.data.replace("'", "");
             message = message.replace("'", "");
             message = JSON.parse(message);
+            ///////////////////////////////////////////
 
             console.log("message", message.new_val);
             vue.receiveMessage(message.new_val);
+
         };
 
     </script>

@@ -31,17 +31,18 @@ http.createServer(function(request, response) {
 
             rethinkdb.table('message').insert({
                 message: 'test',
-                room: 'test'
+                room: 'not-implemented'
             });
 
         });
 
 
-        response.statusCode = 200;
-        response.setHeader('Content-Type', 'application/json');
-        // response.setHeader('Access-Control-Allow-Origin', '*');
+        // response.statusCode = 200;
+        // response.setHeader('Content-Type', 'application/json');
         // Note: the 2 lines above could be replaced with this next one:
-        // response.writeHead(200, {'Content-Type': 'application/json'})
+
+
+        response.writeHead(200, {'Content-Type': 'application/json'})
 
         var responseBody = {
             headers: headers,
@@ -50,12 +51,10 @@ http.createServer(function(request, response) {
             body: body
         };
 
-        // TODO: vue recognizes this as OPTIONS not POST and cant decode JSON
-        // response.end(JSON.stringify({message:'test'}));
-        response.end(JSON.stringify({message:'test'}));
-        console.log('message saved');
+        //response.end(JSON.stringify({message:'test'}));
 
-        // END OF NEW STUFF
+        response.end('[1,2]');
+        console.log('message saved');
 
     });
 

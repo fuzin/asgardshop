@@ -5,10 +5,13 @@ use Illuminate\Support\Facades\App;
 use Illuminate\Http\Response;
 use Modules\Chat\Repositories\ChatRepository;
 use Modules\Core\Http\Controllers\BasePublicController;
+
 use brunojk\LaravelRethinkdb\Connection as RethinkDBConn;
 use brunojk\LaravelRethinkdb\Query as Query;
 use brunojk\LaravelRethinkdb\Query\Builder as Bilder;
 
+
+use Modules\Chat\Http\Requests\CreateMessageRequest;
 
 class PublicController extends BasePublicController
 {
@@ -37,9 +40,50 @@ class PublicController extends BasePublicController
     /**
      * Store chat.
      */
-    public function store() {
+    public function store(CreateMessageRequest $request) {
+
+        $con = new RethinkDBConn(
+            [
+                'port'      => 28015,
+                'host'      => 'localhost',
+                'database'  => 'test'
+            ]
+        );
+
+        $insertData = [
+            "text"      => $request->get("text"), // $request->param("message"),
+            "username"  => $request->get("username") // $request->param("username")
+        ];
+
+        $query = new Query\Builder($con);
+        $query->from("message");
+        $success = $query->insert($insertData);
+
+        /*
+        $query->insert([
+            'test' => 'test'
+        ]);
+        */
+
+
+
+        /*
+        $query->r()->run('r.table(\'message\').insert({
+                text: \'message test 123\',
+                username: \'test\'})');
+        */
+
+
+        // $query->insert();
+
 
         // rethinkdb
+        // $path = base_path('vendor/danielmewes/php-rql/rdb');
+        // include "$path/rdb.php";
+
+        // dd("$path/rdb.php");
+        // $conn = r\connect('localhost');
+
         /*
         $conn = new RethinkDBConn([
             'name'      => 'rethinkdb',
@@ -59,13 +103,18 @@ class PublicController extends BasePublicController
         return 'test';
         */
 
-        return response(array('email' => 'bojan@kovacec.net'),200)->header('Content-Type', 'application/json');
+        return response(array('succes' => $success),200)->header('Content-Type', 'application/json');
     }
 
     /**
      * Chat room
      */
     public function room() {
-        return view('chat.room');
+        // urls for services
+        $baseUrl = url('/');
+        $storeMsgUrl = $baseUrl.':8282/';
+        $wsUrl = 'ws://'.preg_replace('#^https?://#', '', $baseUrl).':8081/';
+        return view('chat.room', compact('storeMsgUrl', 'wsUrl'));
     }
+
 }

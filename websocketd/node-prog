@@ -1,6 +1,10 @@
 #!/usr/bin/node
-
 r = require('rethinkdb');
+
+// get room from parameter
+///////////////////////////
+
+
 
 // var connection = null; - not initialized after connect
 r.connect( {host: 'localhost', port: 28015}, function(err, conn) {
@@ -75,13 +79,10 @@ r.connect( {host: 'localhost', port: 28015}, function(err, conn) {
         cursor.each(function(err, row) {
             if (err) throw err;
             console.dir(JSON.stringify(row));
-            // console.dir(row);
         });
     });
 
 });
-
-
 
 
 /*

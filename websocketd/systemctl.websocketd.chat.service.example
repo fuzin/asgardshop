@@ -1,0 +1,21 @@
+[Unit]
+Description=Websocketd for Chat App
+
+[Service]
+ExecStart=/var/www/prod/websocketd/websocketd --port=8081 /var/www/prod/websocketd/node-prog
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
+
+
+
+
+####################################################
+copy above to file in
+etc/systemd/system/websocketd.chat.service
+
+RUN:
+systemctl enable websocketd.chat.service
+systemctl start websocketd.chat.service
