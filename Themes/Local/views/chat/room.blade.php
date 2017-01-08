@@ -146,7 +146,7 @@
 
 <div class="container-fluid">
     <div class="row/col-xs-12">
-        <span>Room: {!! $name !!}, Username: {!! $username !!}</span>
+        <span>Room: {!! $room !!}, Username: {!! $username !!}</span>
     </div>
 </div>
 
@@ -335,15 +335,13 @@
                     Vue.http.headers.common['X-CSRF-TOKEN'] = document.querySelector('#_token').getAttribute('value');
                     // console.log('{!! $storeMsgUrl !!}');
 
-                    this.$http.post('/en/chat/store', {text: this.message, username: '{!! $username !!}'}).then(function (response) {
+                    this.$http.post('/en/chat/store', {text: this.message, room: '{!! $room !!}', username: '{!! $username !!}'}).then(function (response) {
                         // console.log(response);
                         // console.log('here response success');
 
                     }, function (response) {
                         // console.log(response);
                         // console.log('here response fails');
-
-
                     });
 
                     // console.log('{!! $storeMsgUrl !!}');

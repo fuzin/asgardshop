@@ -110,13 +110,14 @@ class PublicController extends BasePublicController
     public function room(CreateRoomRequest $request) {
         // urls for services
 
-        $name = $request->get("room");
+        $room = $request->get("room");
         $username = $request->get("username");
 
         $baseUrl = url('/');
         $storeMsgUrl = $baseUrl.':8282/';
         $wsUrl = 'ws://'.preg_replace('#^https?://#', '', $baseUrl).':8081/';
-        return view('chat.room', compact('name', 'username', 'storeMsgUrl', 'wsUrl'));
+        return view('chat.room', compact('room', 'username', 'storeMsgUrl', 'wsUrl'));
+
     }
 
     public function user(CreateUsernameRequest $request) {
