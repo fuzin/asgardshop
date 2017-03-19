@@ -1,8 +1,8 @@
-<?php namespace Modules\Place\Providers;
+<?php namespace Modules\Product\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
-class PlaceServiceProvider extends ServiceProvider
+class ProductServiceProvider extends ServiceProvider
 {
     /**
      * Indicates if loading of the provider is deferred.
@@ -33,19 +33,17 @@ class PlaceServiceProvider extends ServiceProvider
 
     private function registerBindings()
     {
-
         $this->app->bind(
-            'Modules\Place\Repositories\PlaceRepository',
+            'Modules\Product\Repositories\ProductRepository',
             function () {
-                $repository = new \Modules\Place\Repositories\Eloquent\EloquentPlaceRepository(new \Modules\Place\Entities\Place());
+                $repository = new \Modules\Product\Repositories\Eloquent\EloquentProductRepository(new \Modules\Product\Entities\Product());
 
                 if (! config('app.cache')) {
                     return $repository;
                 }
 
-                return new \Modules\Place\Repositories\Cache\CachePlaceDecorator($repository);
+                return new \Modules\Product\Repositories\Cache\CacheProductDecorator($repository);
             }
         );
-
     }
 }

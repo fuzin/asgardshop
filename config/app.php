@@ -171,7 +171,7 @@ return [
 		Iconic\Facebook\FacebookServiceProvider::class,
 		Andreyco\Instagram\Support\Laravel\ServiceProvider\Instagram::class,
 
-        duxet\Rethinkdb\RethinkdbServiceProvider::class,
+
 
 	],
 
