@@ -223,4 +223,5 @@ return [
 		'Facebook'  => Iconic\Facebook\Facades\FacebookClient::class,
 		'Instagram' => Andreyco\Instagram\Support\Laravel\Facade\Instagram::class,
 	],
+
 ];

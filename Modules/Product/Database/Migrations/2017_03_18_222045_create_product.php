@@ -53,9 +53,6 @@ class CreateProduct extends Migration {
 
         });
 
-        // Classification store - product properties
-        // TODO:
-
     }
 
     /**
