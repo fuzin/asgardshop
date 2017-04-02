@@ -59,17 +59,6 @@
                         {!! $errors->first("{$lang}[og_description]", '<span class="help-block">:message</span>') !!}
                     </div>
 
-                    <!--
-                    <div class="form-group{{ $errors->has("{$lang}[og_type]") ? ' has-error' : '' }}">
-                        <label>{{ trans('product::products.form.og_type') }}</label>
-                        <select class="form-control" name="{{ $lang }}[og_type]">
-                            <option value="website" {{ old("$lang.og_type") == 'website' ? 'selected' : '' }}>{{ trans('product::products.facebook-types.website') }}</option>
-                            <option value="product" {{ old("$lang.og_type") == 'product' ? 'selected' : '' }}>{{ trans('product::products.facebook-types.product') }}</option>
-                            <option value="article" {{ old("$lang.og_type") == 'article' ? 'selected' : '' }}>{{ trans('product::products.facebook-types.article') }}</option>
-                        </select>
-                    </div>
-                    -->
-
                 </div>
             </div>
         </div>

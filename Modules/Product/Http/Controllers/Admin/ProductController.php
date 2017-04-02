@@ -58,6 +58,24 @@ class ProductController extends AdminBaseController
         return redirect()->route('admin.product.product.index');
     }
 
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param Product $product
+     * @return \Illuminate\View\View
+     */
+    public function edit(Product $product)
+    {
+        // TODO: $thumbnail = $this->file->findFileByZoneForEntity('thumbnail', $post);
+        // TODO: $categories = $this->category->allTranslatedIn(app()->getLocale());
+        // TODO: $statuses = $this->status->lists();
+        // TODO: $this->assetPipeline->requireJs('ckeditor.js');
+
+        return view('product::admin.products.edit', compact('product'));
+    }
+
+
     /**
      * Remove the specified resource from storage.
      *

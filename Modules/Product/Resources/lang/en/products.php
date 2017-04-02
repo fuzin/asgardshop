@@ -1,6 +1,9 @@
 <?php
 
 return [
+
+    'title.products' => 'Product',
+
     'table.name' => 'Name',
     'form.name'  => 'Name',
 
@@ -19,5 +22,8 @@ return [
 
     'button.create product' => 'Create Product',
 
+    'title.create product' => 'Create Product',
+    'title.edit product'   => 'Edit Product',
+    'title.pages'          => 'Product',
 
 ];
