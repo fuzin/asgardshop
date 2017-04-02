@@ -8,5 +8,9 @@ return [
         'edit',
         'update',
         'destroy',
+        'attribute.groups',
+        'attribute.group.create',
+        'attributes',
+        'attribute.create'
     ]
 ];

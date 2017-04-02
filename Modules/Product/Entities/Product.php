@@ -7,29 +7,22 @@ class Product extends Model
 {
     use Translatable;
 
+    public $translatedAttributes = [
+        'name',
+        'slug',
+        'meta_title',
+        'meta_description',
+        'og_title',
+        'og_description'
+    ];
+
+    protected $fillable = [
+        'EAN',
+        'name',
+        'slug'
+    ];
+
+
     protected $table = 'product__products';
 
-    public $translatedAttributes = [
-        'slug',
-        'description'
-    ];
-    
-    protected $fillable = [
-        'name',
-
-        'title',
-        'slug',
-        'description',
-
-        'zip',
-        'city',
-        'street',
-
-        'email',
-        'website',
-        'phone',
-    ];
-    
-    
-    
 }

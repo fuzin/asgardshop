@@ -5,10 +5,10 @@ use Modules\Core\Repositories\Cache\BaseCacheDecorator;
 
 class CacheProductDecorator extends BaseCacheDecorator implements ProductRepository
 {
-    public function __construct(ProductRepository $place)
+    public function __construct(ProductRepository $product)
     {
         parent::__construct();
-        $this->entityName = 'place.places';
-        $this->repository = $place;
+        $this->entityName = 'product.products';
+        $this->repository = $product;
     }
 }

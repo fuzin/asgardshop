@@ -35,7 +35,7 @@ class SidebarExtender implements \Maatwebsite\Sidebar\SidebarExtender
                 $item->weight(10);
                 $item->authorize(
 
-                /* append */
+                // list products
                 );
                 $item->item(trans('product::menu.list'), function (Item $item) {
                     $item->icon('fa fa-tags');
@@ -46,6 +46,37 @@ class SidebarExtender implements \Maatwebsite\Sidebar\SidebarExtender
                         $this->auth->hasAccess('product.products.index')
                     );
                 });
+
+                // list attribute groups
+                /*
+                $item->item(trans('product::menu.attribute.group.list'), function (Item $item) {
+                    $item->icon('fa fa-tags');
+                    $item->weight(1);
+                    $item->append('admin.product.attribute.group.create');
+                    $item->route('admin.product.attribute.group.index');
+                    $item->authorize(
+                        $this->auth->hasAccess('product.products.attribute.groups')
+                    );
+                });
+                */
+
+
+
+                // list attributes
+
+                $item->item(trans('product::menu.attribute.list'), function (Item $item) {
+                    $item->icon('fa fa-tags');
+                    $item->weight(0);
+                    $item->append('admin.product.attribute.create');
+                    $item->route('admin.product.attribute.index');
+                    $item->authorize(
+                        $this->auth->hasAccess('product.products.attributes')
+                    );
+                });
+
+
+
+
             });
         });
 
