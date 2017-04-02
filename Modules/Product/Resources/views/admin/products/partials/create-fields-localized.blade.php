@@ -68,7 +68,7 @@
                             <option value="article" {{ old("$lang.og_type") == 'article' ? 'selected' : '' }}>{{ trans('product::products.facebook-types.article') }}</option>
                         </select>
                     </div>
-
+                    -->
 
                 </div>
             </div>
