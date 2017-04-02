@@ -1,7 +1,10 @@
 # asgardshop
 
-Shop module based on laravel and asgardcms.
-Shop module is in research status and servers for trying out design patterns.
+Shop module based on Laravel and Asgardcms.  
+  
+WIP: Shop module is in research status.   
+  
+If you are interested on same topics send me an email: bojan@kovacec.net  
 
 # Product Module
 
