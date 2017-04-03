@@ -18,6 +18,7 @@ class CreateProductRequest extends BaseFormRequest
 
         return [
             'name' => 'required',
+            'slug' => "required|unique:product__product_translations,slug,null,product_id,locale,$this->localeKey",
         ];
 
     }
@@ -39,7 +40,8 @@ class CreateProductRequest extends BaseFormRequest
     {
         return [
             'name.required' => trans('product::messages.EAN is required'),
-            //'body.required' => trans('page::messages.body is required'),
+            'slug.required' => trans('page::messages.slug is required'),
+            'slug.unique' => trans('blog::messages.slug is unique'),
         ];
     }
 }

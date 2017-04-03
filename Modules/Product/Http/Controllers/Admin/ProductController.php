@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use Modules\Product\Entities\Product;
 use Modules\Product\Repositories\ProductRepository;
 use Modules\Product\Http\Requests\CreateProductRequest;
+use Modules\Product\Http\Requests\UpdateProductRequest;
 use Modules\Core\Http\Controllers\Admin\AdminBaseController;
 
 class ProductController extends AdminBaseController
@@ -54,6 +55,23 @@ class ProductController extends AdminBaseController
         $this->product->create($request->all());
 
         flash(trans('product::messages.product created'));
+
+        return redirect()->route('admin.product.product.index');
+    }
+
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param Product $product
+     * @param UpdateProductRequest $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    public function update(Product $product, UpdateProductRequest $request)
+    {
+        $this->product->update($product, $request->all());
+
+        flash(trans('blog::messages.product updated'));
 
         return redirect()->route('admin.product.product.index');
     }
